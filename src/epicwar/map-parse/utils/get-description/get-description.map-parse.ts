@@ -1,9 +1,4 @@
-import { JSDOM } from 'jsdom'
-
-export function getMapDescription (content: string): string | null {
-  const dom = new JSDOM(content)
-  const cells = dom.window.document.getElementsByClassName('listentry')
-
+export function getMapDescription (cells: Element[]): string | null {
   for (const cell of cells) {
     const content = cell.textContent
     if (content.indexOf('Share this map') === -1) {

@@ -1,10 +1,4 @@
-import { JSDOM } from 'jsdom'
-
-export function getMapName (content: string): string {
-  let response = ''
-  const dom = new JSDOM(content)
-  const cells = dom.window.document.getElementsByClassName('listentry')
-
+export function getMapName (cells: Element[]): string {
   for (const cell of cells) {
     const urls = cell.getElementsByTagName('a')
     for (const url of urls) {
