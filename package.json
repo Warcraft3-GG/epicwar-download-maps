@@ -25,6 +25,7 @@
   "homepage": "https://github.com/Sansossio/warcraft3-maps-download#readme",
   "devDependencies": {
     "@types/axios": "^0.14.0",
+    "@types/jest": "^25.2.3",
     "jest": "^26.0.1",
     "ts-jest": "^26.0.0",
     "ts-node": "^8.10.2",
