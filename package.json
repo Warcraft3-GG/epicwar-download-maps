@@ -33,6 +33,7 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
+    "@types/jsdom": "^16.2.3",
     "axios": "^0.19.2",
     "jsdom": "^16.2.2"
   }
