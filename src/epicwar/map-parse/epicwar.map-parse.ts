@@ -7,12 +7,20 @@ export function epicwarMapParse (content: string): EpicwarMapParseResponse {
   const dom = new JSDOM(content)
   const cells = dom.window.document.getElementsByClassName('listentry')
 
+  // Map fields
+  const id = getMapID(cells)
+  const name = getMapName(cells)
+  const url = getMapUrl(cells)
+  const description = getMapDescription(cells)
+  const details = getMapDetails(cells)
+  const image = getMapImage(cells)
+
   return {
-    id: getMapID(cells),
-    name: getMapName(cells),
-    url: getMapUrl(cells),
-    description: getMapDescription(cells),
-    details: getMapDetails(cells),
-    image: getMapImage(cells)
+    id,
+    name,
+    url,
+    description,
+    details,
+    image
   }
 }
