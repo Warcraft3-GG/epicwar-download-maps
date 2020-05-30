@@ -14,9 +14,12 @@ export function getMapDetails (cells: HTMLCollectionOf<Element>): EpicwarMapPars
     const playableArea = /Playable Area: (.*)/gm.exec(text)[1].split('x')
     const date = /Submitted: (.*)/gm.exec(text)[1]
     const size = /Size: (.*)/gm.exec(text)[1]
+    const players = /Recommended Players: (.*)/gm.exec(text)[1]
+
     return {
       category,
       tileset,
+      players,
       dimensions: {
         x: +dimensions[0],
         y: +dimensions[1]

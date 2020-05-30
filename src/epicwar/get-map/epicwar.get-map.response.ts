@@ -13,6 +13,11 @@ export type EpicwarMapParseDetailsResponse = {
    * Map size in bytes
    */
   size: number
+  /**
+   * Recommended players
+   * Example: 2, 3+
+   */
+  players: string
 }
 
 export type EpicwarMapParseMapFileResponse = {
