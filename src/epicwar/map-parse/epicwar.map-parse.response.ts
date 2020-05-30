@@ -17,4 +17,5 @@ export type EpicwarMapParseResponse = {
   url: string
   description: string
   details: EpicwarMapParseDetailsResponse
+  image: string
 }
