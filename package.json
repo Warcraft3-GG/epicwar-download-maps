@@ -1,8 +1,8 @@
 {
-  "name": "warcraft3-maps-download",
+  "name": "epicwar",
   "version": "0.1.0",
   "description": "Epicwar.com maps download",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "lint": "tslint --project tsconfig.json",
