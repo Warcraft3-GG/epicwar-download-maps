@@ -1,2 +1,2 @@
 export { epicwarGetMap } from './epicwar/get-map/epicwar.get-map'
-export { totalMaps } from './epicwar/maps-total/maps-count'
+export { totalMaps } from './epicwar/total-maps/total-maps'
