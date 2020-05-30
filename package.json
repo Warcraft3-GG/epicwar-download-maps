@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "lint": "tslint --project tsconfig.json",
-    "lint:fix": "tslint --project tsconfig.json --fix"
+    "lint:fix": "tslint --project tsconfig.json --fix",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
