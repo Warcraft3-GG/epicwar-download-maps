@@ -20,6 +20,12 @@ export async function epicwarGetMap (mapId: string | number, download?: boolean)
   const description = getMapDescription(cells)
   const details = getMapDetails(cells)
   const image = getMapImage(cells)
+
+  if (!id) {
+    throw new Error('Map not found')
+  }
+
+  // Optional fields
   const file = download ? await getFile(url) : undefined
 
   return {
