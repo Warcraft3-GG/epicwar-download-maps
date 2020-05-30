@@ -8,9 +8,10 @@ export function getMapID (content: string): number | null {
     const urls = cell.getElementsByTagName('a')
     for (const url of urls) {
       const { href } = url
-      if (href.startsWith('/maps/download')) {
-        return +/\/([0-9]+)\//gm.exec(href)[1]
+      if (!href.startsWith('/maps/download')) {
+        continue
       }
+      return +/\/([0-9]+)\//gm.exec(href)[1]
     }
   }
 
