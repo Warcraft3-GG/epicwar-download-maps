@@ -4,3 +4,4 @@ examples
 .vscode
 .env
 src
+jest.config.js
