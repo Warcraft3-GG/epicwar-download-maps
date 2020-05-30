@@ -1,1 +1,8 @@
-console.log('hello world')
+import axios from 'axios'
+import { epicwarMapParse } from './epicwar/map-parse/epicwar.map-parse'
+
+(async () => {
+  const response = await axios({ method: 'GET', url: 'https://www.epicwar.com/maps/1/' })
+  const mapParse = epicwarMapParse(response.data)
+  console.log(mapParse)
+})()
