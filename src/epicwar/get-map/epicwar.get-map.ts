@@ -2,7 +2,7 @@ import { JSDOM } from 'jsdom'
 import { EpicwarMapParseResponse } from './epicwar.map-parse.response'
 import { getMapID, getMapName, getMapUrl, getMapDescription, getMapDetails, getMapImage, getFile } from './utils'
 
-export async function epicwarMapParse (content: string, download?: boolean): Promise<EpicwarMapParseResponse> {
+export async function epicwarGetMap (content: string, download?: boolean): Promise<EpicwarMapParseResponse> {
   // Find into dom
   const dom = new JSDOM(content)
   const cells = dom.window.document.getElementsByClassName('listentry')
