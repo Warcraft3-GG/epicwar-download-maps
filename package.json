@@ -4,7 +4,9 @@
   "description": "Epicwar.com maps download",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --project tsconfig.json --fix"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "devDependencies": {
     "jest": "^26.0.1",
     "ts-jest": "^26.0.0",
+    "tslint": "^6.1.2",
     "tslint-config-standard": "^9.0.0",
     "typescript": "^3.9.3"
   },
