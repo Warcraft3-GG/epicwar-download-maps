@@ -1,8 +1,14 @@
+import axios from 'axios'
 import { JSDOM } from 'jsdom'
 import { EpicwarMapParseResponse } from './epicwar.get-map.response'
 import { getMapID, getMapName, getMapUrl, getMapDescription, getMapDetails, getMapImage, getFile } from './utils'
+import { EpicwarEnum } from '../epicwar.enum'
 
-export async function epicwarGetMap (content: string, download?: boolean): Promise<EpicwarMapParseResponse> {
+export async function epicwarGetMap (mapId: string | number, download?: boolean): Promise<EpicwarMapParseResponse> {
+  const content = (await axios({
+    method: 'GET',
+    url: `${EpicwarEnum.BASE_URL}/maps/${mapId}`
+  })).data
   // Find into dom
   const dom = new JSDOM(content)
   const cells = dom.window.document.getElementsByClassName('listentry')
