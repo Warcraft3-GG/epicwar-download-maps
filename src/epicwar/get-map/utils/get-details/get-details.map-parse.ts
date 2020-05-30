@@ -1,4 +1,4 @@
-import { EpicwarMapParseDetailsResponse } from '../../epicwar.map-parse.response'
+import { EpicwarMapParseDetailsResponse } from '../../epicwar.get-map.response'
 import { parseSize } from '../../../../utils/parse-size/parse-size.utils'
 
 export function getMapDetails (cells: HTMLCollectionOf<Element>): EpicwarMapParseDetailsResponse | null {
