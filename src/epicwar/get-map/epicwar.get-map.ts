@@ -1,5 +1,5 @@
 import { JSDOM } from 'jsdom'
-import { EpicwarMapParseResponse } from './epicwar.map-parse.response'
+import { EpicwarMapParseResponse } from './epicwar.get-map.response'
 import { getMapID, getMapName, getMapUrl, getMapDescription, getMapDetails, getMapImage, getFile } from './utils'
 
 export async function epicwarGetMap (content: string, download?: boolean): Promise<EpicwarMapParseResponse> {

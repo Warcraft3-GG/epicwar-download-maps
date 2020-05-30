@@ -1,6 +1,6 @@
 import axios from 'axios'
 import sha1 from 'sha1'
-import { EpicwarMapParseMapFileResponse } from '../../epicwar.map-parse.response'
+import { EpicwarMapParseMapFileResponse } from '../../epicwar.get-map.response'
 
 export async function getFile (url: string): Promise<EpicwarMapParseMapFileResponse> {
   const file = await axios({
