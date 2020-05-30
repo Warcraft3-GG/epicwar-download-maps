@@ -1,6 +1,6 @@
 import { JSDOM } from 'jsdom'
 import { EpicwarMapParseResponse } from './epicwar.map-parse.response'
-import { getMapID, getMapName, getMapUrl, getMapDescription } from './utils'
+import { getMapID, getMapName, getMapUrl, getMapDescription, getMapDetails } from './utils'
 
 export function epicwarMapParse (content: string): EpicwarMapParseResponse {
   // Find into dom
@@ -18,6 +18,7 @@ export function epicwarMapParse (content: string): EpicwarMapParseResponse {
     id: getMapID(cells),
     name: getMapName(cells),
     url: getMapUrl(cells),
-    description: getMapDescription(cells)
+    description: getMapDescription(cells),
+    details: getMapDetails(cells)
   }
 }
