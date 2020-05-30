@@ -1,4 +1,5 @@
 import { EpicwarMapParseDetailsResponse } from '../../epicwar.map-parse.response'
+import { parseSize } from '../../../../utils/parse-size/parse-size.utils'
 
 export function getMapDetails (cells: HTMLCollectionOf<Element>): EpicwarMapParseDetailsResponse | null {
   for (const cell of cells) {
@@ -12,6 +13,7 @@ export function getMapDetails (cells: HTMLCollectionOf<Element>): EpicwarMapPars
     const dimensions = /Dimensions: (.*)/gm.exec(text)[1].split('x')
     const playableArea = /Playable Area: (.*)/gm.exec(text)[1].split('x')
     const date = /Submitted: (.*)/gm.exec(text)[1]
+    const size = /Size: (.*)/gm.exec(text)[1]
     return {
       category,
       tileset,
@@ -23,7 +25,8 @@ export function getMapDetails (cells: HTMLCollectionOf<Element>): EpicwarMapPars
         x: +playableArea[0],
         y: +playableArea[1]
       },
-      date: new Date(Date.parse(date))
+      date: new Date(Date.parse(date)),
+      size: parseSize(size)
     }
   }
 

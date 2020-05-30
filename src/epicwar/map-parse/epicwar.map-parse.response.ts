@@ -9,6 +9,10 @@ export type EpicwarMapParseDetailsResponse = {
   dimensions: EpicwarDimensions
   playableArea: EpicwarDimensions
   date: Date
+  /**
+   * Map size in bytes
+   */
+  size: number
 }
 
 export type EpicwarMapParseResponse = {
