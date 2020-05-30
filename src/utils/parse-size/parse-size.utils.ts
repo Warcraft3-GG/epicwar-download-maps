@@ -8,6 +8,9 @@ const GB_TO_BYTE = MB_TO_BYTE * KB_TO_BYTE
  */
 export function parseSize (input: string): number {
   const data = /(\d+(\.\d{0,2})?|\.?\d{1,2})\s?(\w+)/gm.exec(input)
+  if (!data) {
+    return +input
+  }
   let response = +data[1]
   const grouper = data[3].toLowerCase()
   switch (grouper) {
@@ -20,8 +23,6 @@ export function parseSize (input: string): number {
     case 'gb':
       response *= GB_TO_BYTE
       break
-    default:
-      response = -1
   }
   return response
 }
