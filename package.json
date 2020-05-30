@@ -1,0 +1,30 @@
+{
+  "name": "warcraft3-maps-download",
+  "version": "0.1.0",
+  "description": "Epicwar.com maps download",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sansossio/warcraft3-maps-download.git"
+  },
+  "keywords": [
+    "warcraft3",
+    "maps",
+    "download"
+  ],
+  "author": "Julio Sansossio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sansossio/warcraft3-maps-download/issues"
+  },
+  "homepage": "https://github.com/Sansossio/warcraft3-maps-download#readme",
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "tslint-config-standard": "^9.0.0",
+    "typescript": "^3.9.3"
+  }
+}
