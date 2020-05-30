@@ -9,9 +9,10 @@ export function getMapUrl (content: string): string | null {
     const urls = cell.getElementsByTagName('a')
     for (const url of urls) {
       const { href } = url
-      if (href.startsWith('/maps/download')) {
-        return `${EpicwarEnum.BASE_URL}${href}`
+      if (!href.startsWith('/maps/download')) {
+        continue
       }
+      return `${EpicwarEnum.BASE_URL}${href}`
     }
   }
 

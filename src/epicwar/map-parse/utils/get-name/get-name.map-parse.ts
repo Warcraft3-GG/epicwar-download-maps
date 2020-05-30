@@ -9,9 +9,10 @@ export function getMapName (content: string): string {
     const urls = cell.getElementsByTagName('a')
     for (const url of urls) {
       const { href } = url
-      if (href.startsWith('/maps/download')) {
-        return url.textContent.trim()
+      if (!href.startsWith('/maps/download')) {
+        continue
       }
+      return url.textContent.trim()
     }
   }
 
