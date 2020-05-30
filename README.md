@@ -15,7 +15,7 @@ import { epicwarGetMap } from 'epicwar'
   console.log(map)
 })()
 ```
-[More examples](https://github.com/Sansossio/warcraft3-maps-download/tree/master/examples)
+[More examples](https://github.com/Sansossio/epicwar-download-maps/tree/master/examples)
 
 ## Available methods
 - [x] `Get map`
