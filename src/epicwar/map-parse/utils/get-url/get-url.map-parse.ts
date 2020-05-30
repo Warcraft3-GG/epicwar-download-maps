@@ -1,6 +1,6 @@
 import { EpicwarEnum } from '../../../epicwar.enum'
 
-export function getMapUrl (cells: Element[]): string | null {
+export function getMapUrl (cells: HTMLCollectionOf<Element>): string | null {
   for (const cell of cells) {
     const urls = cell.getElementsByTagName('a')
     for (const url of urls) {

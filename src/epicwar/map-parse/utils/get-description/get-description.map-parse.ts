@@ -1,4 +1,4 @@
-export function getMapDescription (cells: Element[]): string | null {
+export function getMapDescription (cells: HTMLCollectionOf<Element>): string | null {
   for (const cell of cells) {
     const content = cell.textContent
     if (content.indexOf('Share this map') === -1) {

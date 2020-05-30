@@ -1,4 +1,4 @@
-export function getMapID (cells: Element[]): number | null {
+export function getMapID (cells: HTMLCollectionOf<Element>): number | null {
   for (const cell of cells) {
     const urls = cell.getElementsByTagName('a')
     for (const url of urls) {

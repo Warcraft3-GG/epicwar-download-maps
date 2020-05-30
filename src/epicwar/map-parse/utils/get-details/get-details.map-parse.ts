@@ -1,6 +1,6 @@
 import { EpicwarMapParseDetailsResponse } from '../../epicwar.map-parse.response'
 
-export function getMapDetails (cells: Element[]): EpicwarMapParseDetailsResponse | null {
+export function getMapDetails (cells: HTMLCollectionOf<Element>): EpicwarMapParseDetailsResponse | null {
   for (const cell of cells) {
     const content = cell.textContent
     if (content.indexOf('Category') === -1) {

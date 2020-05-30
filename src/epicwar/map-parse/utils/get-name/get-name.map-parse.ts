@@ -1,4 +1,4 @@
-export function getMapName (cells: Element[]): string {
+export function getMapName (cells: HTMLCollectionOf<Element>): string {
   for (const cell of cells) {
     const urls = cell.getElementsByTagName('a')
     for (const url of urls) {
