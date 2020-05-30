@@ -5,3 +5,4 @@ examples
 .env
 src
 jest.config.js
+dist/tsconfig.tsbuildinfo

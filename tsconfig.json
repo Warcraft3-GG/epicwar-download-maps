@@ -9,9 +9,7 @@
     "target": "es2017",
     "sourceMap": false,
     "outDir": "./dist",
-    "baseUrl": "./src",
-    "jsx": "react",
-    "incremental": true
+    "baseUrl": "./src"
   },
   "exclude": ["node_modules", "dist", "src/**/*.spec.ts", "examples"]
 }
