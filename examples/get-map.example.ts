@@ -1,4 +1,4 @@
-import { epicwarGetMap } from '../src'
+import { epicwarGetMap } from 'epicwar'
 
 (async () => {
   // Map: https://www.epicwar.com/maps/1

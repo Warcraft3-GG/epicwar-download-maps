@@ -1,4 +1,4 @@
-import { totalMaps, getCategories } from '../src'
+import { totalMaps, getCategories } from 'epicwar'
 
 (async () => {
   // Get map categories

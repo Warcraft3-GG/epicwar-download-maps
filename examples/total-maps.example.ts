@@ -1,4 +1,4 @@
-import { totalMaps } from '../src'
+import { totalMaps } from 'epicwar'
 
 (async () => {
   // Map: Get total maps

@@ -1,0 +1,14 @@
+{
+  "name": "epicwar-examples",
+  "version": "1.0.0",
+  "description": "Epicwar package examples",
+  "scripts": {},
+  "author": "Julio Sansossio",
+  "license": "ISC",
+  "dependencies": {
+    "epicwar": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  }
+}
