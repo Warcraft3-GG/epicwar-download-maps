@@ -7,7 +7,7 @@ export function getMapDescription (cells: HTMLCollectionOf<Element>): string | n
     const innerHTML = cell.innerHTML
     const html = innerHTML
       .split(/by <b>(.*?)<\/b><br><br>/gm)[2].trim()
-      .split(/<br><br>\n\s+<b>Share this map: <\/b>/gm)[0].trim()
+      .split(/<br><br>\n\s+<b>((Rate this map)|(You rated this map)): <\/b>/gm)[0].trim()
     return html
   }
 
