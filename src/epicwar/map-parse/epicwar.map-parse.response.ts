@@ -15,6 +15,11 @@ export type EpicwarMapParseDetailsResponse = {
   size: number
 }
 
+export type EpicwarMapParseMapFileResponse = {
+  content: Buffer
+  sha1: string
+}
+
 export type EpicwarMapParseResponse = {
   id: number
   name: string
@@ -22,4 +27,5 @@ export type EpicwarMapParseResponse = {
   description: string
   details: EpicwarMapParseDetailsResponse
   image: string
+  file?: EpicwarMapParseMapFileResponse
 }

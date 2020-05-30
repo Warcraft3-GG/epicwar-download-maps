@@ -1,8 +1,8 @@
 import { JSDOM } from 'jsdom'
 import { EpicwarMapParseResponse } from './epicwar.map-parse.response'
-import { getMapID, getMapName, getMapUrl, getMapDescription, getMapDetails, getMapImage } from './utils'
+import { getMapID, getMapName, getMapUrl, getMapDescription, getMapDetails, getMapImage, getFile } from './utils'
 
-export function epicwarMapParse (content: string): EpicwarMapParseResponse {
+export async function epicwarMapParse (content: string, download?: boolean): Promise<EpicwarMapParseResponse> {
   // Find into dom
   const dom = new JSDOM(content)
   const cells = dom.window.document.getElementsByClassName('listentry')
@@ -14,6 +14,7 @@ export function epicwarMapParse (content: string): EpicwarMapParseResponse {
   const description = getMapDescription(cells)
   const details = getMapDetails(cells)
   const image = getMapImage(cells)
+  const file = download ? await getFile(url) : undefined
 
   return {
     id,
@@ -21,6 +22,7 @@ export function epicwarMapParse (content: string): EpicwarMapParseResponse {
     url,
     description,
     details,
-    image
+    image,
+    file
   }
 }
