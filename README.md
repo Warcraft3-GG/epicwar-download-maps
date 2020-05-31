@@ -1,6 +1,7 @@
 # Epicwar
 
-Get maps information from "epicwars.com"
+Get maps information from [epicwar.com](http://epicwar.com)
+
 
 ## Example
 ```ts
