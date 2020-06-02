@@ -1,6 +1,6 @@
 {
   "name": "epicwar",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Epicwar.com maps download",
   "main": "dist/index.js",
   "scripts": {

@@ -23,3 +23,6 @@ import { epicwarGetMap } from 'epicwar'
 - [x] `Get and download map`
 - [x] `Get total maps`
 - [x] `Get maps categories`
+
+## Warcraft3 GG
+This repository is part of [https://github.com/Warcraft3-GG](Warcraft3-GG) organization
