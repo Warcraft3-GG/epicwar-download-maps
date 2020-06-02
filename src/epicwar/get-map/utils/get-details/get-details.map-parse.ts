@@ -1,8 +1,8 @@
 
-import { GetMapParseDetailsResponse } from 'warcraft3gg-dto'
+import { GetMapDetailsDTO } from 'warcraft3gg-dto'
 import { parseSize } from '../../../../utils/parse-size/parse-size.utils'
 
-export function getMapDetails (cells: HTMLCollectionOf<Element>): GetMapParseDetailsResponse | null {
+export function getMapDetails (cells: HTMLCollectionOf<Element>): GetMapDetailsDTO | null {
   for (const cell of cells) {
     const content = cell.textContent
     if (content.indexOf('Category') === -1) {
