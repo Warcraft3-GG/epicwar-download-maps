@@ -1,8 +1,8 @@
 import axios from 'axios'
 import sha1 from 'sha1'
-import { EpicwarMapParseMapFileResponse } from '../../epicwar.get-map.response'
+import { GetMapFileDTO } from 'warcraft3gg-dto'
 
-export async function getFile (url: string): Promise<EpicwarMapParseMapFileResponse> {
+export async function getFile (url: string): Promise<GetMapFileDTO> {
   const file = await axios({
     url,
     responseType: 'arraybuffer'
