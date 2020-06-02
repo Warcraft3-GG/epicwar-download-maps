@@ -1,7 +1,8 @@
-import { EpicwarMapParseDetailsResponse } from '../../epicwar.get-map.response'
+
+import { GetMapParseDetailsResponse } from 'warcraft3gg-dto'
 import { parseSize } from '../../../../utils/parse-size/parse-size.utils'
 
-export function getMapDetails (cells: HTMLCollectionOf<Element>): EpicwarMapParseDetailsResponse | null {
+export function getMapDetails (cells: HTMLCollectionOf<Element>): GetMapParseDetailsResponse | null {
   for (const cell of cells) {
     const content = cell.textContent
     if (content.indexOf('Category') === -1) {
