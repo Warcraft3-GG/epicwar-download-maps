@@ -2,6 +2,8 @@ import axios from 'axios'
 import { EpicwarEnum } from '../epicwar.enum'
 import { JSDOM } from 'jsdom'
 
+const CATEGORIES_TEXT = '[All Categories]'
+
 export async function getCategories (): Promise<string[]> {
   const content = (await axios({
     method: 'GET',
@@ -16,7 +18,7 @@ export async function getCategories (): Promise<string[]> {
     const options: Element[] = (select as any).options
     for (const option of options) {
       const { textContent } = option
-      if (textContent === '[All Categories]') {
+      if (textContent === CATEGORIES_TEXT) {
         continue
       }
       response.push(textContent)
