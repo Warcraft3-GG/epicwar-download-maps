@@ -4,6 +4,9 @@ import { JSDOM } from 'jsdom'
 
 const CATEGORIES_TEXT = '[All Categories]'
 
+/**
+ * Get all map categories
+ */
 export async function getCategories (): Promise<string[]> {
   const content = (await axios({
     method: 'GET',
