@@ -2,7 +2,6 @@
 
 Get maps information from [epicwar.com](http://epicwar.com)
 
-
 ## Example
 ```ts
 import { epicwarGetMap } from 'epicwar'
